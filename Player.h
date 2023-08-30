@@ -1,5 +1,6 @@
 ﻿#pragma once
-const int PLAYER_SIZE = 64;
+const int PLAYER_SIZE{ 64 };
+const int PLAYER_RECT_SIZE{ 48 };
 
 class Player
 {

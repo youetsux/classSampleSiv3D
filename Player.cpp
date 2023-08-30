@@ -12,7 +12,7 @@ Player::Player()
 Player::Player(Vec2 _pos)
 {
 	pos = _pos;
-	speed = 100;
+	speed = 50;
 	moveDir = { 0,0 };
 	tex = TextureAsset(U"PLAYER");
 }
@@ -31,7 +31,7 @@ void Player::Update()
 {
 	moveDir = { 1.0, 0.0 };
 	pos = pos + speed * Scene::DeltaTime() * moveDir;
-	SetMyRect(48);
+	SetMyRect(PLAYER_RECT_SIZE);
 }
 
 //キャラクタの現在の状態の描画関数

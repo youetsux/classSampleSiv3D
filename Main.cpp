@@ -6,7 +6,7 @@ void Main()
 	// 背景の色を設定する | Set the background color
 	Scene::SetBackground(Palette::Lightgray);
 
-	TextureAsset::Register(U"PLAYER", U"🤩"_emoji);
+	TextureAsset::Register(U"PLAYER", U"👹"_emoji);
 	TextureAsset::Register(U"ENEMY", U"👹"_emoji);
 
 	Player player({ 32, 32 });
