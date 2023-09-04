@@ -14,6 +14,7 @@ class Enemy
 	bool isAlive;
 	bool isTimerON;
 	double myTimer;
+	int killCount;
 public:
 	Enemy();
 	Enemy(Vec2 _pos, double _speed, Vec2 _dir);
@@ -24,5 +25,6 @@ public:
 	void KillEnemy();
 	void Update();
 	void Draw();
+	int GetKillCount();
 };
 

@@ -7,6 +7,7 @@ enum direction
 };
 
 
+//クラスの概要 宣言文
 class Player
 {
 //何も書かないとprivate

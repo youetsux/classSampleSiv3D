@@ -6,10 +6,11 @@ Enemy::Enemy()
 	pos = { 0,0 };
 	speed = 100;
 	moveDir = { 0,0 };
-	tex = TextureAsset(U"PLAYER");
+	tex = TextureAsset(U"ENEMY");
 	isAlive = true;
 	isTimerON = false;
 	myTimer = 1.0;
+	killCount = 0;
 }
 
 Enemy::Enemy(Vec2 _pos, double _speed, Vec2 _dir)
@@ -21,6 +22,7 @@ Enemy::Enemy(Vec2 _pos, double _speed, Vec2 _dir)
 	isAlive = true;
 	isTimerON = false;
 	myTimer = 1.0;
+	killCount = 0;
 }
 
 Enemy::~Enemy()
@@ -39,6 +41,8 @@ RectF Enemy::GetRect()
 void Enemy::KillEnemy()
 {
 	isAlive = false;
+	pos = { -100,-100 };
+	killCount++;
 	//どっか、ランダム位置（画面内にリスポーン）
 	//できる人は1秒後にリスポーン
 	isTimerON = true;
@@ -70,6 +74,12 @@ void Enemy::Draw()
 {
 	if (isAlive) {
 		tex.resized(ENEMY_SIZE).drawAt(pos);
-		myRect.drawFrame(1, 1, Palette::Red);
+		//myRect.drawFrame(1, 1, Palette::Red);
 	}
 }
+
+int Enemy::GetKillCount()
+{
+	return(killCount);
+}
+

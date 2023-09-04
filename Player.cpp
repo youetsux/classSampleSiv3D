@@ -84,5 +84,5 @@ void Player::Update()
 void Player::Draw()
 {
 	tex.resized(PLAYER_SIZE).drawAt(pos);
-	myRect.drawFrame(1, 1, Palette::Red);
+	//myRect.drawFrame(1, 1, Palette::Red);
 }
